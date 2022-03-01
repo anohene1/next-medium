@@ -5,6 +5,8 @@
 /.pnp
 .pnp.js
 
+nextmedium/node_modules
+
 # testing
 /coverage
 
