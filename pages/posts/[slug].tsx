@@ -1,7 +1,7 @@
 import { sanityClient, urlFor } from '../../sanity'
 import Header from '../../components/Header'
 import { Post } from '../../typings'
-import { Head } from 'next/document'
+import Head from 'next/head'
 import PortableText from 'react-portable-text'
 import { useForm, SubmitHandler } from 'react-hook-form'
 import { useState } from 'react'
@@ -43,6 +43,9 @@ export default function PostScreen({ post }: Props) {
 
   return (
     <main>
+      <Head>
+        <title>{post.title}</title>
+      </Head>
       <Header />
       <img
         src={urlFor(post.mainImage).url()}
